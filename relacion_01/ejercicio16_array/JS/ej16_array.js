@@ -1,4 +1,3 @@
-
 function comprobarCom(){
 	do{
 		numComensales = prompt("¿Cuantos comensales sois? ")
@@ -19,7 +18,6 @@ function crearMesas(){
 	console.log("Estado de las mesas: "+mesas)
 	return mesas
 }
-
 
 function darMesa(){
 	let mesas = crearMesas()
