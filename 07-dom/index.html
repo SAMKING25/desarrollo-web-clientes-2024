@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atacando al fokin DOM</title>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <img id="img" src="https://en.js.cx/clipart/train.gif?speed=1&cache=0">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            alert("DOM esta listo calisto")
+            alert(`Tamaño de imagen: ${img.offsetWidth} x ${img.offsetHeight} `)
+        })
+        // opcion 1
+        // document.addEventListener("DOMContentLoaded",ready)
+
+        // opcion 2
+        // window.onload = function(){
+        //     alert("DOM esta listo calisto")
+        //     alert(`Tamaño de imagen: ${img.offsetWidth} x ${img.offsetHeight} `)       
+        // }
+
+        // opcion 2 onload B
+        window.addEventListener('load',ready)
+
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          alert("DOM listo!");
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+    <script>
+        alert("Libreria cargada, línea de script ejecutada");
+    </script>
+</body>
+</html>
