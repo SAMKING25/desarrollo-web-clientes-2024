@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .caja--negra{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            padding: 20px;
+        }
+        .caja--roja{
+            display: flex;
+            align-items: flex-end;
+            justify-content:center;
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            padding: 20px;
+        }
+        
+    </style>
 </head>
 <body onload="inicioDOM()">
-    <h1 id="title">Titulo 1</h1>
+    <h1 id="title" onclick="cambioCabecera(this)">Titulo 1</h1>
+    <h2 id="subtitle">Subtitulo</h2>
+    <h3 id="h3title">Subtitulo 2</h3>
 
+    <form name="up"><input type="text" /></form>
+    <div id="caja1" class="caja--negra" name="down"><input type="text" /></div>
+    <div id="caja2" class="caja--negra" name="down"><input type="text" /></div>
+
+    <section id="proyectos" class="projects">
+        <p class="parrafos1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+    </section>
+
+    <section id="resenias" class="reviews">
+        <p class="parrafos1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+        <p class="parrafos2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex quae illo ab, autem saepe magni, veniam quis, suscipit aspernatur corrupti quod adipisci obcaecati sunt quia ducimus laborum sed. Tenetur, expedita!</p>
+    </section>
+    
+    
     <script src="./JS/dom.js"></script>
 </body>
 </html>

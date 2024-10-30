@@ -1,0 +1,38 @@
+/* reseteamos estilos */
+*{
+    margin: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    min-height: 100vh; /* ocupa el 100% de la altura vertical que tiene el navegador */
+    scroll-behavior: smooth; /* scroll suavizado */
+    text-rendering: optimizeSpeed; /* renderice fuentes de forma más rápida */
+    line-height: 1.5;
+}
+ul, ol{
+    list-style: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+p a{
+    display: inline; /* esos enlaces dentro de un párrafo que se presenten en línea para que no se produzca un salto de línea */
+}
+
+img, video, iframe, picture, figure{
+ max-width: 100%;
+ /* display: block; */
+}
+/* fin de reseteo de estilos */

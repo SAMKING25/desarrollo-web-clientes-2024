@@ -1,0 +1,15 @@
+/* Definición Variables modo Oscuro
+ definimos familia de fuente que voy a utilizar */
+ :root{
+    --mx-width: 1240px;
+    --color-primary: #37bcf9;
+    --color-secondary: #fff;
+    --color-backgroung: #ccc;
+    --color-bg: black;
+    --color-text-white: white;
+    --color-text-title: #00538c;
+    --color-grey: gray;
+    --color-box-shadow: #ddd;
+    --color-box-shadow2: #393d3f;
+    --color-focus: #555;
+}

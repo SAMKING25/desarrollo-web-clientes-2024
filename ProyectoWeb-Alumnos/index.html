@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- user_scalable = no - es para que el usuario no pueda realizar zoom con los 2 dedos. -->
+    <meta name="viewport" content="width=device-width, user-scalable=no"> 
+    <title>Proyecto Web</title>
+    <link rel="shortcut icon" href="img/supertux.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/reset_estilos.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <!-- Inicio Cabecera -->
+    <header class="header">
+        <div class="header__wrap">
+            <div class="header__logo"> 
+                <span class="logo__gear">S</span>
+                <h3>BLOG</h3>
+            </div>
+            <nav class="header__menu">
+                <ul class="menu__list">
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">FORMACIÓN</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <!-- fin de la Cabecera -->
+    
+    <main class="content__wrap">
+        <section class="content__info">
+            <!-- Inicio Banner -->
+            <div class="content__banner">
+                <h1>Diseño de CSS por Alumn@</h1>
+            </div>
+            <!-- fin de Banner -->
+            <!-- Inicio Tarjetas -->
+            <div class="content__cards">
+                <div class="cards__card">
+                    <p class="card__icon">H</p>
+                    <h2 class="card__category">Desarrollo Web</h2>
+                    <p class="card__description">
+                        Aprende los principales lenguajes para desarrollar webs. !Conviértete en Web Master!
+                    </p>
+                </div>
+                <div class="cards__card">
+                    <p class="card__icon">_</p>
+                    <h2 class="card__category">Sistemas Operativos</h2>
+                    <p class="card__description">
+                        Aprende a administrar sistemas operativos linux y windows.
+                    </p>
+                </div>
+                <div class="cards__card">
+                    <p class="card__icon">S</p>
+                    <h2 class="card__category">Hardware</h2>
+                    <p class="card__description">
+                        Conoce los entresijos del hardware.
+                    </p>
+                </div>
+                <div class="cards__card">
+                    <p class="card__icon">u</p>
+                    <h2 class="card__category">Redes e Internet</h2>
+                    <p class="card__description">
+                        Aprende a configurar y administrar redes informáticas y servidores.
+                    </p>
+                </div>
+                <div class="cards__card">
+                    <p class="card__icon">a</p>
+                    <h2 class="card__category">Bases de Datos</h2>
+                    <p class="card__description">
+                        Aprende a instalar y administrar bases de datos.
+                    </p>
+                </div>
+            </div>
+            <!-- fin de Tarjetas -->
+        </section>
+        <!-- Inicio de Barra Lateral -->
+        <div class="clearfix"></div>
+        <aside class="content__lateral">
+            <h3 class="lateral__title">BUSCAR</h3>
+            <div class="lateral__search">
+                <form>
+                    <input type="text">
+                    <input type="button" value="L" class="search__icon">
+                </form>
+            </div>
+            <h3 class="lateral__title">LOGIN</h3>
+            <div class="lateral__login aside-box">
+                <form>
+                    <label class="lateral-box__user aside-box__icon">U</label>
+                    <input type="email">
+                    <label class="lateral-box__password aside-box__icon">w</label>
+                    <input type="password">
+                    <input type="submit" value="Entrar">
+                    <input type="reset" value="Limpiar">
+                    <a href="#">Regístrate aquí</a>
+                    <a href="#">Has olvidado tu contraseña?</a>
+                </form>
+            </div>
+            <h3 class="lateral__title">REDES SOCIALES</h3>
+            <div class="lateral__social aside-box">
+                <div class="social__twitter">
+                    <a href="#" class="social__icon">t</a>
+                    <p class="social__overlay">
+                        Twitter
+                    </p>
+                </div>
+                <div class="social__facebook">
+                    <a href="#" class="social__icon">f</a>
+                    <p class="social__overlay">
+                        Facebook
+                    </p>
+                </div>
+                <div class="social__youtube">
+                    <a href="#" class="social__icon">y</a>
+                    <p class="social__overlay">
+                        Youtube
+                    </p>
+                </div>
+            </div>
+            <h3 class="lateral__title">PATROCINADORES</h3>
+            <div class="lateral__sponsors aside-box">
+            </div>
+        </aside>
+        <!-- fin de Aside -->
+        <!-- Inicio de los Artículos -->
+        <section class="content__articles" id="seccionArticulos">
+            <h2 class="articles__title">Últimos artículos</h2>
+            <div class="clearfix"></div>
+
+        <!-- <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de enero</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Título de artículo 1</a>
+                </h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de febrero</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Título de artículo 2</a>
+                </h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de marzo</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Título de artículo 3</a>
+                </h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de abril</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Título de artículo 4</a>
+                </h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+            </article>
+            <article class="articles__article">
+                <div class="article__datos">
+                    <span>Fecha: 01 de agosto</span>
+                    <span>Categoría: Pruebas</span>
+                </div>
+                <h4 class="article__subtitle">
+                    <a href="#">Título de artículo 5</a>
+                </h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, dolores. Consequatur quis tenetur, modi quod quam repellat facilis minus molestias dicta eum ex voluptatibus itaque necessitatibus, possimus quas? Fugiat, veritatis!</p>
+            </article>
+            <article class="articles__blog">
+                <a href="#">Ir al Blog</a>
+            </article> -->
+        </section>
+        <!-- muevo aqui los botones -->
+        <button id="incluyeAnuncio">
+            Añadir Anuncio
+        </button>
+        <button id="incluyeArticulo">
+            Añadir Artículo
+        </button>
+        <div class="articles__blog">
+            <a href="#">Ir al Blog</a>
+        </div>
+        <!-- fin de los Artículos -->
+    </main>
+    <div class="clearfix"></div>
+    <!-- Inicio de Pié de Página -->
+    <footer class="content__footer">
+        <div class="footer__wrap">
+            <div class="footer__menuFooter">
+                <h5 class="footer__title">MENÚ</h5>
+                <ul class="footer__list">
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">FORMACIÓN</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                </ul>
+            </div>
+            <div class="footer__location">
+                <h5 class="footer__title">DÓNDE ESTAMOS?</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.2996623515555!2d-4.462811723546774!3d36.69133637227841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f9c45623d2c3%3A0x7a634bd28c0cf953!2sMEDAC%20Nova%20%F0%9F%A5%87%20Centro%20Tecnol%C3%B3gico%20de%20FP!5e0!3m2!1ses!2ses!4v1698701252334!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer__info">
+                <h5 class="footer__title">Desarrollado con</h5>
+                <p>
+                    <img src="img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="Creado con HTML y CSS">
+                </p>
+                <h5 class="footer__title">Optimizado para</h5>
+                <p class="footer__browsers">
+                    <a href="#">
+                        <img src="img/firefox-icon.png" alt="Firefox">
+                    </a>
+                    <a href="#">
+                        <img src="img/chrome.png" alt="Chrome">
+                    </a>
+                    <a href="#">
+                        <img src="img/safari.png" alt="Safari">
+                    </a>
+                    <a href="#">
+                        <img src="img/android.png" alt="Android">
+                    </a>
+                    <a href="#">
+                        <img src="img/Opera_256x256.png" alt="Opera">
+                    </a>
+                </p>
+                <h5 class="footer__title">AUTOR</h5>
+                <p>&copy; Alumn@ - WEB</p>
+            </div>
+        </div>
+    </footer>
+    <!-- fin de Pié de Página -->
+     <script src="./js/main.js"></script>
+</body>
+</html>
