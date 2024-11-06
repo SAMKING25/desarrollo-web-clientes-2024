@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador de Lista de Tareas</title>
+</head>
+<body>
+  <h2>Lista de Tareas</h2>
+  <div id="listaContainer">
+    <ul id="listaTareas">
+      <li class="tarea" id="primerElemento">Tarea 1</li>
+    </ul>
+  </div>
+
+  <!-- Botones para las diferentes acciones -->
+  <button id="btnAgregarAntes">Agregar antes del primer elemento</button>
+  <button id="btnAgregarDespues">Agregar después del primer elemento</button>
+  <button id="btnAgregarInicio">Agregar al inicio de la lista</button>
+  <button id="btnAgregarFinal">Agregar al final de la lista</button>
+  <button id="btnReemplazarTodo">Reemplazar todos los elementos</button>
+  <button id="btnReemplazarPrimero">Reemplazar el primer elemento</button>
+  <button id="btnEliminaPrimero">Eliminar el primer elemento</button>
+  
+  <!-- Nuevos botones con querySelector -->
+  <button onclick="reemplazarElemento1()">Reemplazar la 1ra Tarea</button>
+  <button onclick="eliminarElemento1()">Eliminar la 1ra Tarea</button>
+
+    <script src="./JS/ejercicio25.js"></script>
+  </body>
+</html>

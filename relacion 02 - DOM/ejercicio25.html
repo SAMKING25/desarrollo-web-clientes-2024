@@ -1,0 +1,51 @@
+<!-- Ejercicio: Administrador de Lista de Tareas Objetivo 1. Crear una lista de
+tareas con opciones para añadir elementos en diferentes posiciones, reemplazar,
+y eliminar. 2. Cada botón realizará una acción específica usando uno de los
+métodos de manipulación del DOM. -->
+
+<!-- Api de elementos
+elemento.before(); Añade el nuevo elemento justo antes.
+elemento.after(); Añade el nuevo elemento justo después.
+elemento.prepend(); Añade el nuevo elemento justo antes del primer hijo.
+elemento.append(); Añade el nuevo elemento justo después del último hijo
+elemento.replaceChildren(); eliminar todos los hijos y los cambia por el nuevo elemento.
+elemento.replaceWith(); se sustituye el elemento por el nuevo.
+elemento.remove(); elimina el propio elemento. -->
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrador de Lista de Tareas</title>
+  </head>
+  <body>
+    <h2>Lista de Tareas</h2>
+    <div id="listaContainer">
+      <ul id="listaTareas">
+        <li class="tarea" id="primerElemento">Tarea 1</li>
+      </ul>
+    </div>
+
+    <!-- Botones para las diferentes acciones -->
+    <button id="btnAgregarAntes">Agregar antes del primer elemento</button>
+    <button onclick="agregarDespues()">
+      Agregar después del primer elemento
+    </button>
+    <button onclick="agregarAlInicio()">Agregar al inicio de la lista</button>
+    <button onclick="agregarAlFinal()">Agregar al final de la lista</button>
+    <button onclick="reemplazarElementos()">
+      Reemplazar todos los elementos
+    </button>
+    <button onclick="reemplazarElemento()">
+      Reemplazar el primer elemento
+    </button>
+    <button onclick="eliminarElemento()">Eliminar el primer elemento</button>
+
+    <!-- Nuevos botones con querySelector -->
+    <button onclick="reemplazarElemento1()">Reemplazar la 1ra Tarea</button>
+    <button onclick="eliminarElemento1()">Eliminar la 1ra Tarea</button>
+
+    <script src="./JS/ej25.js"></script>
+  </body>
+</html>

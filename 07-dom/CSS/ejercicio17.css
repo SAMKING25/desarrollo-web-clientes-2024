@@ -1,0 +1,41 @@
+div, section{
+    position: absolute;
+}
+
+.primero{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 1px solid black;
+    margin-bottom: 2%;
+    left: 0;
+    top:0;  
+}
+.segundo{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    border: 1px solid black;
+    margin-bottom: 2%;
+    left: 0;
+    top:150px;
+}
+
+.tercero{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    border: 1px solid black;
+    margin-bottom: 2%;
+    left: 0;
+    top: 350px;
+}
+.cuarto{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin-bottom: 4%;
+    left: 0;
+    top:500px;
+}

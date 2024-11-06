@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio de Tabla</title>
+    <style>
+      /* Estilos iniciales para la tabla */
+      .miTabla {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        margin: 0px auto; /* para alinear al centro horizontalmente */
+      }
+      .caja{
+        padding: 20px;
+        margin: 0px auto;
+        border: 1px solid black;
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- La tabla con bordes, medidas y alineación al centro -->
+    <!-- <table id="miTabla" align="center" border="1">
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table> -->
+    <div id="seccionTabla" class="caja">
+
+    </div>
+    <!-- Botones para interactuar con la tabla -->
+    <button onclick="cambiarDimensiones()">
+      Cambiar dimensiones de la tabla
+    </button>
+    <button onclick="cambiarBorde()">Cambiar borde de la tabla</button>
+    <button onclick="cambiarAlineacion()">
+      Cambiar alineación de la tabla
+    </button>
+
+    <script>
+      // función para crear la tabla
+      function creoTabla() {
+        let tam = 4;
+
+        let seccionTabla = document.getElementById("seccionTabla");
+
+        let nuevaTabla = document.createElement("table");
+        nuevaTabla.classList.add("miTabla");
+        nuevaTabla.id = "miTabla";
+        let tablaBody = document.createElement("tbody");
+
+        // nuevaTabla.style.width = "100%";
+        nuevaTabla.setAttribute("border", 1);
+        nuevaTabla.style.width = "300px";
+        nuevaTabla.style.height = "300px";
+
+        for (let i = 0; i < tam; i++) {
+          let fila = document.createElement("tr");
+
+          for (let j = 0; j < tam; j++) {
+            let celda = document.createElement("td");
+
+            // opción 1
+            // let textoCelda = document.createTextNode(`Fila : ${i+1}, Columna: ${j+1}`);
+            // celda.appendChild(textoCelda);
+
+            // opción 2
+            celda.innerHTML = `F:${i + 1}, C:${j + 1}`;
+
+            // opción 3
+            // celda.textContent = `F:${i+1}, C:${j+1}`;
+
+            // Añadir un manejador de eventos para cambiar el color al hacer click
+            // en la celda oportuna.
+            celda.onclick = function () {
+              cambiarColorCelda(this);
+            };
+            fila.appendChild(celda);
+            // añado la celda que acabo de crear a la fila que estoy construyendo
+          }
+          tablaBody.appendChild(fila);
+        }
+        nuevaTabla.appendChild(tablaBody);
+        seccionTabla.appendChild(nuevaTabla);
+      }
+      // Función para mostrar y cambiar dimensiones de la tabla
+      function cambiarDimensiones() {
+        let tabla = document.getElementById('miTabla');
+        console.log("Mi tabla:");
+        console.log(tabla);
+        alert(
+          "Anchura actual: " +
+            tabla.style.width +
+            "\nAltura actual: " +
+            tabla.style.height);
+        let nuevaAnchura = prompt("Introduce la nueva anchura (px):");
+        let nuevaAltura = prompt("Introduce la nueva altura (px):");
+        tabla.style.width = nuevaAnchura + "px";
+        tabla.style.height = nuevaAltura + "px";
+      }
+
+      // Función para mostrar y cambiar el borde de la tabla
+      function cambiarBorde() {
+        let tabla = document.getElementById("miTabla");
+        let actualBorde = tabla.style.borderWidth;
+        alert("Borde actual: " + actualBorde);
+        let nuevoBorde = prompt("Introduce el nuevo valor del borde (px):");
+        tabla.style.border = nuevoBorde + "px solid black";
+      }
+
+      // Función para cambiar la alineación de la tabla
+      function cambiarAlineacion() {
+        let tabla = document.getElementById("miTabla");
+        let alineacionActual = tabla.style.margin;
+        if (alineacionActual === "auto") {
+          tabla.style.marginLeft = "auto";
+          tabla.style.marginRight = "0";
+        } else if (alineacionActual === "0px auto 0px 0px") {
+          tabla.style.marginLeft = "0";
+          tabla.style.marginRight = "auto";
+        } else {
+          tabla.style.margin = "auto";
+        }
+      }
+      creoTabla();
+    </script>
+  </body>
+</html>
+
+<!--
+¿Se aplican correctamente los valores? Sí, los valores de anchura y altura se aplican correctamente a la tabla utilizando tabla.style.width y tabla.style.height.
+¿Falla alguno? No debería fallar, pero el código no tiene validación de entrada, por lo que si el usuario ingresa algo que no sea un número, puede no comportarse como se espera.
+¿Funciona correctamente el nuevo valor? Sí, el valor del borde se cambia correctamente utilizando tabla.style.border. Nuevamente, la entrada del usuario debe ser un número válido para que el cambio sea efectivo.
+El código para cambiar la alineación de la tabla maneja los cambios entre el centro, la izquierda y la derecha alterando los márgenes de la tabla. Esto se hace verificando el valor actual y estableciendo los márgenes para mover la tabla a la posición deseada.
+ -->
