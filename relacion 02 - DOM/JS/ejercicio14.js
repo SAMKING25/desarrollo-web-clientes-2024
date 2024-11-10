@@ -30,7 +30,7 @@ listadoPrincipal[0].onclick = function(){
         listadoPrincipal[0].appendChild(listaInicio);
 
     } else {
-        listadoPrincipal[0].lastChild.remove();
+        this.lastChild.remove(); // this es listadoPrincipal[0]
         pulsado1 = false;
     }
 }
