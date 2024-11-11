@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 1. Práctica DOM</title>
+    <style>
+      ul {
+        border: 1px solid black;
+        background-color: blue;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 10px;
+        text-decoration: none;
+        padding: 10px;
+      }
+      li {
+        display: flex;
+        flex-flow: row wrap;
+        text-decoration: none;
+        margin: 10px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Mi lista con enlaces</h2>
+
+    <ul id="listaDinamica">
+      <!-- Los elementos de la lista con enlaces se agregarán aquí -->
+    </ul>
+
+    <!-- Botón para agregar un nuevo elemento de la lista con enlace -->
+    <button id="btnAgregar">Agregar elemento a mi lista</button>
+    <button id="btnBorrar">Borrar lista</button>
+    
+    <script src="js/ejercicio1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ejercicio 3. Práctica DOM</title>
+    <style>
+      #seccionDinamica {
+        border: 1px solid black;
+        display: flex;
+        flex-flow: row wrap;
+      }
+      div {
+        margin: 20px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      div a{
+        border: 1px solid black;
+        background-color: aqua;
+        color: black;
+        padding: 15px;
+        text-decoration: none;
+      }
+      div a:hover{
+        background-color: blue;
+        color: white;
+        transform: scale(1.1);
+      }
+      div h2:hover{
+        color: blue;
+        transform: scale(1.1);
+      }
+      img {
+        height: 200px;
+        width: 200px;
+        margin: 20px;
+      }
+      img:hover{
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Sección Dinámica</h2>
+
+    <!-- Botón para agregar un nuevo div -->
+    <button id="btnAgregarDivImagen">Agregar Imágen</button>
+    <!-- Botón para resetear la sección y eliminar todos los divs -->
+    <button id="btnResetearSeccion">Resetear</button>
+    <br/><br/>
+
+    <!-- Sección donde se añadirán los divs -->
+    <section id="seccionDinamica">
+      <!-- Los divs se agregarán aquí -->
+    </section>
+    <script src="js/ejercicio3.js"></script>
+  </body>
+</html>

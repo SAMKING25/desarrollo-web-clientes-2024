@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<meta charset="UTF-8">
+    <title>Ejercicio 2. Práctica DOM</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+	<header id="cabecera">
+		<h2>Ejercicio 2 - DOM</h2>
+		<h3>Manejo de DOM - Calculadora</h3>
+	</header>
+	<div id="calculadora">
+     <!-- pantalla y tecla limpiar -->
+        <div class="parteSuperior">
+            <span class="limpiar" onclick="pulsada('C')">C</span>
+            <div class="pantalla"> </div> <!--Ojo tenemos un espacio para que exista nodeValue-->
+ 		</div>     
+        <div class="teclas">
+            <!-- operadores y otras teclas -->
+            <span class = "numero" onclick="pulsada('7')">7</span>
+            <span class = "numero" onclick="pulsada('8')">8</span>
+            <span class = "numero" onclick="pulsada('9')">9</span>
+            <span class="operador" onclick="pulsada('+')">+</span>
+            <span class = "numero" onclick="pulsada('4')">4</span>
+            <span class = "numero" onclick="pulsada('5')">5</span>
+            <span class = "numero" onclick="pulsada('6')">6</span>
+            <span class="operador" onclick="pulsada('-')">-</span>
+            <span class = "numero" onclick="pulsada('1')">1</span>
+            <span class = "numero" onclick="pulsada('2')">2</span>
+            <span class = "numero" onclick="pulsada('3')">3</span>
+            <span class="operador" onclick="pulsada('/')">÷</span>
+            <span class = "numero" onclick="pulsada('0')">0</span>
+            <span class ="punto" onclick="pulsada('.')">.</span>
+            <span class="igual" onclick="pulsada('=')">=</span>
+            <span class="operador" onclick="pulsada('*')">x</span>
+        </div>
+        <div id="modificado">
+        	<span onclick="modificacion('la_C')">La C</span>
+            <span id="resetear">Reset</span>
+        </div>
+        <div id="contenedor">
+        	<div id="marcaNumeros" onclick="marcaDeNumeros()">Marca numeros</div>
+        	<div id="marcaOperadores" onclick="marcaDeOperadores()">Marca operadores</div>	
+        </div> 
+	</div>
+    <script src="js/ejercicio2.js"></script>
+</body>
+</html>

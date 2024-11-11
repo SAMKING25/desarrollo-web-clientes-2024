@@ -1,0 +1,110 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+#calculadora{
+    font: bold 14px Arial, sans-serif;
+    background-color: #ccc;
+    margin: 0 auto;
+    padding: 20px 20px 9px;
+    width: 286px;	
+     border-radius: 3px;
+     /*height: auto;*/
+}
+.parteSuperior, .teclas{
+    overflow: hidden;
+}
+div.parteSuperior div.pantalla{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #FFF;
+    float: right;
+    width: 180px;
+    height: 40px;
+    font-size: 17px;
+    border-radius: 3px;
+    padding: 0 10px;
+    text-align: right;
+    letter-spacing: 1px;/*espaciado entre caractere*/
+    line-height: 40px;
+}
+.parteSuperior span.limpiar, .teclas span, #modificado span{
+    background-color: #FFFFFF;
+    color: #888888;
+    cursor: pointer;
+    float: left;
+    border-radius: 3px;
+    height: 36px;
+    width: 66px;
+    margin: 0 7px 11px 0;
+    line-height: 36px;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+}
+.parteSuperior span.limpiar{
+    background-color: #FF7C87;
+}
+.teclas span.operador/*, #modificado span#reset*/{
+    margin-right: 0;
+    background-color: #FFDAB9;
+}
+.teclas span.igual{
+    background-color: #F1FF92;
+    color:  #888E5F;
+}
+.parteSuperior span.limpiar:hover, .teclas span:hover, #modificado span:hover{
+    background-color: #9C89F6;
+    color: #FFFFFF;
+} 
+header{
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+    width: 326px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+header h2, header h3{
+    margin: 0;
+    padding: 5px;
+}
+header h3{
+    background-color: grey;
+}
+header h2{
+    background-color: #FFBBF6;
+}
+.teclas span#probandoAndo{
+    width: 100%;
+}
+#contenedor div#marcaNumeros, #contenedor div#marcaOperadores{
+    transition: all 0.4s ease 0s;
+    width: 140px;
+    display: inline-block;
+    height: 36px;
+    border-radius: 3px;
+    line-height: 36px;
+    margin: 0px;
+    background: rgb(202, 60, 60);
+    cursor: pointer;	
+    color: white;
+}
+#contenedor div#marcaNumeros{
+    margin-left: -2px;
+}
+#contenedor div#marcaNumeros:hover, #contenedor div#marcaOperadores:hover{
+    background: rgb(66, 184, 221)
+}
+#modificado{
+    padding: 0 0 0 5px;
+    height: 46px;
+    background-color: white;
+    border-radius: 3px;
+    border: none;
+    margin: 10px;
+}
+#modificado span{
+    margin: 5px 4px 11px 0;
+    background: rgb(202, 60, 60);
+    color: white;
+    width: 48%;
+}
