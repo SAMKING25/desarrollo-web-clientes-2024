@@ -17,7 +17,6 @@ for (let i = 0; i < celdas.length; i++) {
         if(contador == 4){
             contador = 0;
         }
-        
     });
     
 }
