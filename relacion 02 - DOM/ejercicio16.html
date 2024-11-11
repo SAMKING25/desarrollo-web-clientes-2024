@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Carga</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <meter id="meter1" value="0" min="0" max="100"></meter>
+        <button onclick="startLoading('meter1')">Cargar Meter</button>
+    </div>
+    <div class="container">
+        <progress id="progress1" value="0" max="100"></progress>
+        <button onclick="startLoading('progress1')">Cargar Progress</button>
+    </div>
+    <script>
+        function startLoading(id) {
+            let element = document.getElementById(id);
+            let currentValue = 0;
+            let interval = setInterval(() => {
+                currentValue += 1;
+                element.value = currentValue;
+                if (currentValue >= element.max) {
+                    clearInterval(interval);
+                    alert(id + ' ha alcanzado el máximo!');
+                }
+            }, 100); // Incrementa cada 100 milisegundos
+        }
+    </script>
+</body>
+</html>

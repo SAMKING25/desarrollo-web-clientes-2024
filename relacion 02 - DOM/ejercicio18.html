@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Moneda</title>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .monedas {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="monedas" id="monedas">MONEDAS: 0</div>
+    <div class="container">
+        <progress id="progress1" value="0" max="100"></progress>
+        <button id="generarMoneda" onclick="startLoading()">Generar moneda</button>
+    </div>
+
+    <script>
+        let monedas = 0;
+        let interval;
+
+        function startLoading() {
+            let progress = document.getElementById('progress1');
+            let button = document.getElementById('generarMoneda');
+            let currentValue = 0;
+            button.disabled = true;
+            progress.value = 0;
+
+            interval = setInterval(() => {
+                currentValue += 1;
+                progress.value = currentValue;
+                if (currentValue >= progress.max) {
+                    clearInterval(interval);
+                    monedas += 1;
+                    document.getElementById('monedas').textContent = 'MONEDAS: ' + monedas;
+                    button.disabled = false;
+                }
+            }, 50);
+        }
+    </script>
+</body>
+</html>

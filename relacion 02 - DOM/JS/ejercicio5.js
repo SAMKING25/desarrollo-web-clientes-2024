@@ -8,7 +8,6 @@ function cambiarColor(){
         color.classList.add("dos");
     }
     else {
-        color.classList.remove("dos");
-        color.classList.add("uno");
+        color.classList.replace("dos","uno");
     }
 }

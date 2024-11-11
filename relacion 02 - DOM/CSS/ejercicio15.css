@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ccc;
+    background-color: #f4f4f4;
+}
+
+.menu-item {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #e0e0e0;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1; 
+    min-width: 150px;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu a:hover {
+    background-color: #e0e0e0;
+}

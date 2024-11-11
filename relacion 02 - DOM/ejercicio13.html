@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efecto Spoiler</title>
+    <style>
+        .spoiler-content {
+            display: none;
+        }
+        .spoiler-button {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <p class="spoiler-button" onclick="toggleSpoiler('spoiler2', 'button2')" id="button2">Mostrar</p>
+    <p id="spoiler2" class="spoiler-content">Otro contenido de spoiler que se mostrará al hacer clic en "Mostrar".</p>
+
+    <script>
+        function toggleSpoiler(contentId, buttonId) {
+            let content = document.getElementById(contentId);
+            let button = document.getElementById(buttonId);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.textContent = "Ocultar";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Mostrar";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Acordeón Horizontal</title>
+    <link rel="stylesheet" href="CSS/ejercicio15.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="menu-item" onmouseover="showSubMenu('inicio')" onmouseout="hideSubMenu('inicio')">
+            Inicio
+            <div class="submenu" id="inicio">
+                <a href="#">Portada</a>
+                <a href="#">Acerca de mí</a>
+                <a href="#">Mis fotos</a>
+            </div>
+        </div>
+        <div class="menu-item" onmouseover="showSubMenu('proyectos')" onmouseout="hideSubMenu('proyectos')">
+            Proyectos
+            <div class="submenu" id="proyectos">
+                <a href="#">Web Apps</a>
+                <a href="#">Mobile Apps</a>
+                <a href="#">Juegos</a>
+            </div>
+        </div>
+        <div class="menu-item" onmouseover="showSubMenu('portfolio')" onmouseout="hideSubMenu('portfolio')">
+            Portfolio
+            <div class="submenu" id="portfolio">
+                <a href="#">Páginas webs</a>
+                <a href="#">Software</a>
+            </div>
+        </div>
+        <div class="menu-item" onmouseover="showSubMenu('contacto')" onmouseout="hideSubMenu('contacto')">
+            Contacto
+            <div class="submenu" id="contacto">
+                <a href="#">Correo</a>
+                <a href="#">Redes Sociales</a>
+                <a href="#">Teléfono</a>
+            </div>
+        </div>
+    </div>
+    <script src="JS/ejercicio15.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tooltip en Enlaces</title>
+  <style>
+    /* Estilos para el tooltip */
+    #tooltip {
+      width: 200px;
+      height: 200px;
+      background-color: #a15f91;
+      color: #333;
+      font-size: 16px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      display: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+
+  <p>Pasa el ratón sobre <a href="https://aurora.com">AQUI</a> para ver el tooltip.</p>
+
+  <div id="tooltip">Esto es un enlace</div>
+
+  <script>
+    // Selecciona todos los enlaces de la página
+    let enlaces = document.querySelectorAll('a');
+    let tooltip = document.getElementById('tooltip');
+
+    enlaces.forEach(enlace => {
+        enlace.addEventListener('mouseenter', (event) => {
+          tooltip.innerText = `La URL de este enlace es: ${event.target.href}`;
+          tooltip.style.display = 'block';
+        });
+      
+        enlace.addEventListener('mouseleave', () => {
+          tooltip.style.display = 'none';
+        });
+      });
+      
+  </script>
+
+</body>
+</html>
