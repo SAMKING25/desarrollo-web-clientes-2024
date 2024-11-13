@@ -1,0 +1,88 @@
+/*
+	NO PUEDES TOCAR EL CONTENIDO DE ESTE ARCHIVO
+*/
+nav{
+	padding: 1.5em;
+	background-color: mediumseagreen;
+}
+
+nav input[type="button"]{
+	margin: 0 .5em;
+	padding: .75em;
+	border-radius: 5px;
+}
+
+.solucion{
+	border: 3px solid black;
+	padding: 2em;
+	margin: 1em 0;
+}
+
+.tabla{
+	border: 2px solid blue;
+	margin: 0 auto;
+}
+
+.tabla td{
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border: 1px dashed red;
+	text-align: center;
+}
+
+article{
+	width: 500px;
+	padding: 1em;
+	float: left;
+	margin: 0 .5em;
+
+}
+
+article:last-child{
+	padding: 0;
+	width: auto;
+	margin-left: .75em;
+}
+
+article span{
+	display: block;
+	text-align: center;
+}
+
+article + article{
+	width: 150px;
+	font-size: 1.25em;
+	border: 2px solid black;
+}
+
+meter{
+	width: 370px;
+}
+
+
+
+.foto{
+	width: 384px;
+	height: 216px;
+	border: 1px solid black;
+	margin: .2em;
+	float: left;
+}
+
+img{
+	width: 100%;
+}
+#contenedor{
+	max-width: 1178px;
+	min-width: 393px;
+	border: 3px solid blue;
+	margin: 0 auto;
+	float: none;
+	overflow: hidden;
+}
+
+input[type="button"]{
+	display: block;
+	margin: 1em auto;
+}
