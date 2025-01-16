@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activar boton</title>
+</head>
+<body>
+    <form>
+        Nombre
+        <input type="text" id="nombre">
+        <br>
+        Apellidos
+        <input type="text" id="apellidos">
+        <br>
+        <input type="button" id="boton" value="Enviar" disabled>
+    </form>
+    <script>
+        let form = document.querySelector("form");
+        let boton = document.getElementById("boton");
+
+        nombre.addEventListener("input", validar);
+        apellidos.addEventListener("input", validar);
+
+        function validar(){
+            if (form.nombre.value != "" && form.apellidos.value != ""){
+                boton.disabled = false;  
+            } else{
+                boton.disabled = true;
+            }
+        }
+    </script>
+</body>
+</html>

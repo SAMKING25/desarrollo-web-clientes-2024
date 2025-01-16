@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opción Sí o No con Radio Buttons</title>
+</head>
+<body>
+  <label>Selecciona Sí o No:</label><br>
+  
+  <input type="radio" id="si" name="respuesta" value="si" onchange="actualizarInput()"> Sí
+  <input type="radio" id="no" name="respuesta" value="no" onchange="actualizarInput()"> No
+
+  <br><br>
+
+  <input type="text" id="texto" hidden>
+
+  <script>
+    function actualizarInput() {
+      const input = document.getElementById('texto');
+      
+      if (document.getElementById('si').checked) {
+        input.placeholder = 'Puedes escribir';
+        input.hidden = false
+      } else if (document.getElementById('no').checked) {
+        input.hidden = true
+      }
+    }
+  </script>
+</body>
+</html>
