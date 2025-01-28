@@ -23,7 +23,12 @@
             if (borrar) {
                 alert("Se ha borrado el mensaje");
                 // .reset() no acaba de funcionar. Probar de otra manera
-                document.getElementById("formulario3").reset();
+                nom = document.getElementById("nombre");
+                pro = document.getElementById("profesion");
+
+                nom.value ="";
+                pro.value ="";
+                // document.getElementById("formulario3").reset();
             }else{
                 alert("No se ha borrado el mensaje");
             }
