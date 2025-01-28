@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <title>Prueba 1</title>
+    <style type="text/css">
+        #nombreError {
+            display: none;
+            font-size: 0.8em;
+        }
+
+        #nombreError.visible {
+            display: block;
+        }
+
+        input.invalido {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+        <label for="nombre"> Nombre* </label>
+        <input type="text" name="nombre" id="nombre" />
+        <button id="enviar">Enviar</button>
+        <span role="alert" id="nombreError" aria-hidden="true">
+            Ingrese su nombre, por favor
+        </span>
+    </form>
+    <script>
+        const enviar = document.getElementById("enviar");
+
+        enviar.addEventListener("click", validar);
+
+        function validar(e) {
+            e.preventDefault();
+
+            const campoNombre = document.getElementById("nombre");
+            let valido = true;
+
+            if (!campoNombre.value) {
+                const nombreError = document.getElementById("nombreError");
+                nombreError.classList.add("visible");
+                campoNombre.classList.add("invalido");
+                nombreError.setAttribute("aria-hidden", false);
+                nombreError.setAttribute("aria-invalid", true);
+            } else {
+                const nombreError = document.getElementById("nombreError");
+                nombreError.classList.remove("visible");
+                campoNombre.classList.remove("invalido");
+                nombreError.setAttribute("aria-hidden", true);
+                nombreError.setAttribute("aria-invalid", false);
+            }
+            return valido;
+        }
+    </script>
+</body>
+
+</html>

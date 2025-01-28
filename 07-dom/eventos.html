@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>EVENTOS JAVASCRIPT</h2>
+<form onsubmit="enviar()">
+    <div>
+        Nombre <input type="text" id="nombre" onfocus="nombre(this)">
+        <br>
+        Apellido <input type="text" id="apellido" oninput="apellido(this)">
+        <br>
+        Edad <input type="text" id="edad" onblur="edad(this)">
+        <br>
+        Cortar <input type="text" id="cortar" oncut="cortar(this)" value="Intenta cortar">
+        <br>
+        Copiar <input type="text" id="cortar" oncopy="copiar(this)" value="Intenta copiar">
+        <br>
+        Pegar <input type="text" id="pegar" onpaste="pegar(this)">
+        <br>
+        <img src="../ProyectoWeb-Alumnos/img/chrome.png" onmouseenter="pasar(this)" onmouseleave="salir(this)">
+    </div>
+    <div>
+        <input type="submit" id="enviar" value="Enviar">
+        <input type="reset" value="Restablecer">
+    </div>
+</form>
+<script>
+function nombre(x) {
+    x.style.background = "yellow";
+}
+function apellido(x) {
+    x.style.background = "green"; 
+}
+function edad(x) {
+  x.value = "Te vas de aqui";
+}
+function cortar(x) {
+  x.value = "Has cortado el texto ¡NOO!";
+}
+function copiar(x) {
+    navigator.clipboard.writeText("");
+    x.value = "No se copia";
+}
+function pegar(x) {
+    x.style.color = "green"; 
+}
+function pasar(x) {
+    x.style.border = "1px solid red";
+    x.src = "../ProyectoWeb-Alumnos/img/ios.png"; 
+}
+function salir(x) {
+    x.style.border = "";
+    x.src = "../ProyectoWeb-Alumnos/img/chrome.png"; 
+}
+function enviar(x) {
+    x = document.getElementById("enviar");
+    x.style.color = "blue";
+}
+</script>
+
+</body>
+</html>

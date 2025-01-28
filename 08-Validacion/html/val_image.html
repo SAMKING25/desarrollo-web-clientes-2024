@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="file" id="foto">
+        <button id="enviar">Enviar</button>
+    </form>
+    <script>
+        const oneMegaBytesInBytes = 10 ** 6;
+        const pesoLimite = oneMegaBytesInBytes * 2; // 2 megabyte
+        const extensionesPermitidas = ['jpg', 'jpeg', 'png'];
+        const miInput = document.querySelector('#foto');
+
+        function validarImagen() {
+            // Resetea mensaje
+            miInput.setCustomValidity('');
+
+            // Destructuramos para obtener el nombre y el tamaño
+            const { name: archivoNombre, size: archivoPeso } = this.files[0];
+
+
+            // Obtenemos la extensión
+            const fileExtension = archivoNombre.split(".").pop();
+
+            // Validamos si tienes una extensión válida
+            if (!extensionesPermitidas.includes(fileExtension)) {
+                miInput.setCustomValidity('Formato no válido, solo se admite jpg y png');
+            }
+
+            // Validamos el peso
+            if (archivoPeso > pesoLimite) {
+                miInput.setCustomValidity('Demasiado grande');
+            }
+        }
+        
+        miInput.addEventListener("input", validarImagen);
+    </script>
+</body>
+
+</html>
