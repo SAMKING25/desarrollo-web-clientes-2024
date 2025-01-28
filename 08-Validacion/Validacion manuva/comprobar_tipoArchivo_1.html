@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprobar tipo de archivo</title>
+    <link rel="stylesheet" href="../../Bootstrap/Estilos/Minty/bootstrap.min.css">
+  </head>
+  <body>
+    <form action="" enctype="multipart/form-data">
+      <label for="archivo" class="form-label">Introduzca su archivo a verificar:</label><br>
+      <input type="file" name="archivo" id="archivo" class="form-control"><br>
+      <input type="button" id="enviar" value="Enviar" class="btn btn-success" />
+    </form>
+    <script>
+      const archivo = document.getElementById("archivo");
+      const enviar = document.getElementById("enviar");
+
+      enviar.addEventListener("click", () => {
+        let extensiones = ["jpg", "png"];
+        let extension = archivo.value.split(".")[1];
+        if (!extensiones.includes(extension)) {
+          alert("Extensión errónea");
+        } else {
+          enviar.setAttribute("type", "submit");
+        }
+      })
+    </script>
+    <script src="../../Bootstrap/JS/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

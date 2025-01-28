@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>usuario</title>
+  </head>
+  <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode",
+        "Lucida Sans", Tahoma, sans-serif;
+      background-color: #eceff1;
+    }
+    form {
+      max-width: 300px;
+      margin-top: 60px;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+      position: relative;
+      padding-top: 80px;
+    }
+    label,
+    input {
+      display: block;
+    }
+    label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #b0bec5;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      outline: 0;
+      border: 2px solid #b0bec5;
+    }
+    input:invalid { border-color: red; } 
+    input, input:valid { border-color: #ccc; }
+
+    #notify {
+      margin-top: 5px;
+      padding: 10px;
+      font-size: 12px;
+      width: 100%;
+      color: #fff;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+    #notify.error {
+      background-color: #dd2c00;
+    }
+  </style>
+  <body>
+    <form id="form">
+      <div>
+        <label for="usuario">Usuario</label>
+        <input
+          name="usuario"
+          type="text"
+          placeholder="usuario"
+          pattern=""
+          id="usuario"
+        />
+      </div>
+      <input id="botonEnvio" type="submit" value="Comprobar"></button>
+    </form>
+    <script>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #midiv{
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Cambio color sin boton</h1>
+        <label>Color</label>
+        <select name="colores" id="color">
+            <option value="rojo">Rojo</option>
+            <option value="verde">Verde</option>
+            <option value="azul">Azul</option>
+        </select>
+        <div id="midiv">
+            Cambio de Color
+        </div>
+    </form>
+
+    <script>
+        const select = document.getElementById("color");
+        const caja = document.getElementById("midiv");
+        
+        select.addEventListener("change", function(){
+            switch(select.value){
+                case "rojo":
+                    caja.style.backgroundColor = "red";
+                    break;
+                case "verde":
+                    caja.style.backgroundColor = "green";
+                    break;
+                case "azul":
+                    caja.style.backgroundColor = "blue";
+                    break;  
+            }
+        });
+    </script>
+</body>
+</html>

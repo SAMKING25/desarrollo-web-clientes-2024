@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // SI ES LA MISMA CONTRASEÑA SE ACTIVA EL BOTÓN DE ABAJO (EL BOTÓN NO HACE NADA)
+        
+        function verificar() {
+            let nombre = document.getElementById("nom").value;
+            let apellido = document.getElementById("app").value;
+            
+            let boton = document.getElementById("boton");
+            if (nombre === apellido) {
+                boton.disabled = false;  // Habilitar el botón
+            } else {
+                boton.disabled = true;   // Deshabilitar el botón si algún campo está vacío
+            }
+        }
+        
+        // Agregar un evento de entrada a los campos de texto
+        window.onload = function() {
+            document.getElementById("nom").addEventListener("input", verificar);
+            document.getElementById("app").addEventListener("input", verificar);
+        };
+    </script>
+
+    <form name="formulario3" method="POST" action="miPagina.html" target="_blank">
+        Contraseña: <input id="nom" type="password" name="nombre" size="20"><br>
+        Repite Contraseña: <input id="app" type="password" name="profesion" size="20"><br>
+        <input id="boton" type="button" value="Borrar" disabled>
+    </form>
+</body>
+</html>

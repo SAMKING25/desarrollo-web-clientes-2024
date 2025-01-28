@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejemplo 1</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <label>Nombre:</label>
+    <input type="text" required minlength="5" maxlength="50" />
+    <span id="error" class="error"></span>
+    <br />
+    <button id="comprueba">Comprueba</button>
+    <p>checkValidity: <span id="checkValidity"></span></p>
+    <p>validationMessage: <span id="validationMessage"></span></p>
+    <p>validity.valueMissing: <span id="valueMissing"></span></p>
+    <p>validity.tooShort: <span id="tooShort"></span></p>
+    <p>validity.tooLong: <span id="tooLong"></span></p>
+    <script></script>
+  </body>
+</html>

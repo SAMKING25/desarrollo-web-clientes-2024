@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <script>
+        function mostrarCampoTutor() {
+            var edad = document.getElementById("edad").value;
+            var campoTutor = document.getElementById("campoTutor");
+
+            if (edad < 18) {
+                campoTutor.style.display = "block";
+            } else {
+                campoTutor.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Formulario</h2>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" name="edad" required oninput="mostrarCampoTutor()"><br><br>
+
+        <div id="campoTutor" style="display:none;">
+            <label for="tutor">Nombre del tutor:</label>
+            <input type="text" id="tutor" name="tutor"><br><br>
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

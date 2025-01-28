@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function verificar() {
+            let nombre = document.getElementById("nom").value;
+            let apellido = document.getElementById("app").value;
+            
+            let boton = document.getElementById("boton");
+            if (nombre !== "" && apellido !== "") {
+                boton.disabled = false;  // Habilitar el botón
+            } else {
+                boton.disabled = true;   // Deshabilitar el botón si algún campo está vacío
+            }
+        }
+
+        //AGREAGADO DE MANUVA
+        function borrar() {
+            const nombre1 = document.getElementById("nom");
+            const apellido1 = document.getElementById("app")
+
+            nombre1.value = "";
+            apellido1.value = "";
+        } 
+        
+        // Agregar un evento de entrada a los campos de texto
+        window.onload = function() {
+            document.getElementById("nom").addEventListener("input", verificar);
+            document.getElementById("app").addEventListener("input", verificar);
+        };
+    </script>
+
+    <form name="formulario3" method="POST" action="miPagina.html" target="_blank">
+        Nombre: <input id="nom" type="text" name="nombre" size="20"><br>
+        Apellido: <input id="app" type="text" name="profesion" size="20"><br>
+        <input id="boton" type="button" value="Borrar" disabled onclick="borrar()">
+    </form>
+</body>
+</html>

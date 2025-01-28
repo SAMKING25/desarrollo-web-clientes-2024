@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+        <label>File: </label>
+        <input type="file" id="imagen">
+        <input type="button" id="boton" value="Enviar">
+    </form>
+    <script>
+        const fichero = document.getElementById("imagen");
+        const boton = document.getElementById("boton");
+
+        boton.addEventListener("click", function(){
+            let extensiones = ["jpg", "png"];
+            let extension = fichero.value.split(".")[1];
+            if(!extensiones.includes(extension)){
+                alert("Extension erronea");
+            }else{
+                boton.setAttribute("type", "submit");
+            }
+        })
+
+    </script>
+</body>
+</html>

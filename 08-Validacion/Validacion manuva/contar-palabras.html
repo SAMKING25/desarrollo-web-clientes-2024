@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contar palabras</title>
+    <script languaje='javascript'>
+    function contarPalabras(form) {
+        texto = form.mensaje.value
+        texto = texto.split(' ')
+        form.cantidad.value=texto.length
+    }
+</script>
+</head>
+<body>
+    <form name='formulario1' method='POST' action='#' target='_blank'>
+        <b>Por favor, redacte aquí su mensaje</b> Palabras escritas:
+        <input type='text' name='cantidad' value='0' size='2'><br>
+        <textarea rows='4' cols='35' name='mensaje' onKeyPress='contarPalabras(this.form); if (event.keycode1 == 13) form.mensaje.value +=" ";'></textarea><br>
+    </form>
+</body>
+</html>
+
+     

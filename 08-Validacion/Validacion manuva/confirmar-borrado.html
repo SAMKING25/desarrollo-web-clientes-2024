@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        // function confirmarBorrado(form){
+        //     borrar = window.confirm("se van a borrar los datos introducidos en el form");
+        //     if (borrar) {
+        //     form.reset();
+        //     } else {
+        //         alert("No se ha borrado el mensaje");
+        //     }
+        // }
+
+        function confirmarBorrado(form){
+            //Mensaje de confirmación de la ventana del navegador
+            borrar = window.confirm("se van a borrar los datos introducidos en el form");
+            if (borrar) {
+                alert("Se ha borrado el mensaje");
+                // .reset() no acaba de funcionar. Probar de otra manera
+                document.getElementById("formulario3").reset();
+            }else{
+                alert("No se ha borrado el mensaje");
+            }
+        }
+    </script>
+     <form name="formulario3" method="POST" action="miPagina.html" target="_blank">
+        Nombre: <input type="text" name="nombre" size="20"><br>
+        Profesión: <input type="text" name="profesion" size="20"><br>
+        <input type="button" value="Borrar" onclick="confirmarBorrado(this.form)">
+      </form>
+</body>
+</html>
