@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form enctype="multipart/form-data">
+        <label>File: </label>
+        <input type="file" id="imagen">
+        <button id="boton" onclick="comprobarFoto()">Enviar</button>
+    </form>
+
+    <script>
+        function comprobarFoto(){
+            const input = document.getElementById("imagen");
+            const archivo = input.files[0];
+
+            if (archivo) {
+                const nombreImg = archivo.name;
+                const extension = nombreImg.split('.').pop().toLowerCase(); 
+                if (extension === "jpg" || extension === "png") {
+                    alert("Correcto");
+                } else {
+                    alert("Incorrecto. Solo se aceptan archivos .jpg o .png");
+                }
+            } else {
+                alert("Por favor, selecciona un archivo.");
+            }
+        }
+    </script>
+</body>
+</html>
