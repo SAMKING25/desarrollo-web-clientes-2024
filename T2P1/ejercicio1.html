@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejercicio 1</h2>
+    <form>
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+        <span id="err_nombre" class="error"></span>
+        <br>
+        <label>Primer Apellido</label>
+        <input type="text" id="apellido1">
+        <span id="err_apellido1" class="error"></span>
+        <br>
+        <label>Segundo Apellido</label>
+        <input type="text" id="apellido2">
+        <span id="err_apellido2" class="error"></span>
+        <br>
+        <label>Foto</label>
+        <input type="file" id="foto">
+        <span id="err_foto" class="error"></span>
+        <br>
+        <label>Edad</label>
+        <input type="text" id="edad">
+        <span id="err_edad" class="error"></span>
+        <br>
+        <label>Email</label>
+        <input type="email" id="email" pattern="[a-zA-Z].[a-zA-Z]@{1}[a-zA-Z].[a-zA-Z].[a-zA-Z]">
+        <span id="err_email" class="error"></span>
+        <br>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="contrasena">
+        <input type="button" id="mostrar" value="Mostrar">
+        <span id="err_contrasena" class="error"></span>
+        <br>
+        <label for="password">Repetir Contraseña:</label>
+        <input type="password" id="contrasena_rep">
+        <input type="button" id="mostrar_rep" value="Mostrar">
+        <span id="err_contrasena_rep" class="error"></span>
+        <br>
+        <input type="button" id="enviar" value="Enviar">
+        <input id="boton" type="button" value="Borrar" onclick="borrar()">
+    </form>
+    <script>
+        var boton = document.getElementById("enviar");
+
+        let nombre = document.getElementById("nombre");
+        let err_nombre = document.getElementById("err_nombre");
+        let apellido1 = document.getElementById("apellido1");
+        let err_apellido1 = document.getElementById("err_apellido1");
+        let apellido2 = document.getElementById("apellido2");
+        let err_apellido2 = document.getElementById("err_apellido2");
+        let err_foto = document.getElementById("err_foto");
+        let edad = document.getElementById("edad");
+        let err_edad = document.getElementById("err_edad");
+        let email = document.getElementById("email");
+        let err_email = document.getElementById("err_email");
+        let contrasena = document.getElementById("contrasena");
+        let err_contrasena = document.getElementById("err_contrasena");
+        let mostrar = document.getElementById("mostrar");
+        let contrasena_rep = document.getElementById("contrasena_rep");
+        let err_contrasena_rep = document.getElementById("err_contrasena_rep");
+        let mostrar_rep = document.getElementById("mostrar_rep");
+        
+        boton.addEventListener("click",function(){
+            if(nombre.value == ""){
+                err_nombre.textContent = "El nombre es obligatorio";
+            } else {
+                if(nombre.value.length <= 2){
+                    err_nombre.textContent = "El nombre tiene que tener mas de 2 caracteres";
+                } else {
+                    err_nombre.textContent = "";
+                    let val_nombre =true;
+                }
+            }
+
+            if(apellido1.value == ""){
+                err_apellido1.textContent = "El primer apellido es obligatorio";
+            } else {
+                if(apellido1.value.length <= 2){
+                    err_apellido1.textContent = "El primer apellido tiene que tener mas de 2 caracteres";
+                } else {
+                    err_apellido1.textContent = "";
+                    let val_apellido1 =true;
+                }
+            }
+
+            if(apellido2.value !== ""){
+                if(apellido2.value.length <= 2){
+                    err_apellido2.textContent = "El segundo apellido tiene que tener mas de 2 caracteres";
+                } else {
+                    err_apellido2.textContent = "";
+                    let val_apellido2 =true;
+                }
+            }
+
+            if(edad.value == ""){
+                err_edad.textContent = "La edad es obligatoria";
+            } else {
+                if(edad.value < 18 || edad.value > 99){
+                    err_edad.textContent = "La edad tiene que ser entre 18 y 99 años";
+                } else {
+                    err_edad.textContent = "";
+                    let val_edad =true;
+                }
+            }
+
+            if(email.value == ""){
+                err_email.textContent = "El email es obligatorio";
+            } else {
+                err_email.textContent = "";
+                let val_email =true;
+                
+            }
+
+            if(contrasena.value == ""){
+                err_contrasena.textContent = "La contraseña es obligatoria";
+            } else {
+                if(contrasena.value.length < 8 || contrasena.value.length > 10){
+                    err_contrasena.textContent = "La contraseña tiene que ser entre 8 y 10 caracteres";
+                } else {
+                    err_contrasena.textContent = "";
+                    let val_contrasena =true;
+                }
+            }
+            if(contrasena_rep.value == ""){
+                err_contrasena_rep.textContent = "Repetir la contraseña es obligatorio";
+            } else {
+                if(contrasena_rep.value !== contrasena.value){
+                    err_contrasena_rep.textContent = "Las contraseñas no coinciden";
+                } else {
+                    err_contrasena_rep.textContent = "";
+                    let val_contrasena_rep =true;
+                }
+            }
+
+            if(val_nombre && val_apellido1 && val_apellido2 && val_email && val_edad && val_contrasena && val_contrasena_rep){
+                alert("Nombre: "+nombre<br>+"Primer apellido: "+apellido1<br>+"Segundo apellido: "+apellido2<br>+"Edad: "+edad<br>+"Email:"+email<br>+"Contraseña es privada")
+            }
+
+            alert("Nombre: "+nombre<br>+"Primer apellido: "+apellido1<br>+"Segundo apellido: "+apellido2<br>+"Edad: "+edad<br>+"Email:"+email<br>+"Contraseña es privada")
+
+            const input = document.getElementById("foto");
+            const archivo = input.files[0];
+            const nombreImg = archivo.name;
+            const extension = nombreImg.split('.').pop().toLowerCase(); 
+
+            if (extension !== "jpg" && extension !== "png") {
+                err_foto.textContent = "La foto tiene que ser png o jpg";
+            } else {
+                err_foto.textContent = "";
+            }
+            
+        })
+
+        mostrar.addEventListener("click", function(){
+            if (contrasena.type == 'password') {
+                contrasena.type = 'text';
+                mostrar.value = "Ocultar"
+            } else {
+                contrasena.type = 'password';
+                mostrar.value = "Mostrar"
+            } 
+        })
+
+        mostrar_rep.addEventListener("click", function(){
+            if (contrasena_rep.type == 'password') {
+                contrasena_rep.type = 'text';
+                mostrar_rep.value = "Ocultar"
+            } else {
+                contrasena_rep.type = 'password';
+                mostrar_rep.value = "Mostrar"
+            } 
+        })
+
+        function borrar() {
+            let nombre = document.getElementById("nombre");
+            let apellido1 = document.getElementById("apellido1");
+            let apellido2 = document.getElementById("apellido2");
+            let edad = document.getElementById("edad");
+            let email = document.getElementById("email");
+            let contrasena = document.getElementById("contrasena");
+            let contrasena_rep = document.getElementById("contrasena_rep");
+
+            nombre.value = "";
+            apellido1.value = "";
+            apellido2.value = "";
+            edad.value = "";
+            email.value = "";
+            contrasena.value = "";
+            contrasena_rep.value = "";
+        } 
+    </script>
+</body>
+</html>

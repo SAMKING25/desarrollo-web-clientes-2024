@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <label>Aficiones</label><br>
+    <input type="checkbox" id="futbol" name="respuesta" onclick="añadir(this)" value="futbol"> Futbol
+    <input type="checkbox" id="baloncesto" name="respuesta" onclick="añadir(this)" value="baloncesto"> Baloncesto
+    <input type="checkbox" id="voleibol" name="respuesta" onclick="añadir(this)" value="voleibol"> Voleibol
+    <br>
+    <textarea id="campo"></textarea>
+    <br>
+    <input type="button" id="boton" value="Enviar">
+    
+    <script>
+        let boton = document.getElementById("boton");
+        let campo = document.getElementById("campo")
+        boton.addEventListener("click", function(){
+            marcadas = document.getElementsByName("respuesta");
+            for(let i=0;i<marcadas.length;i++){
+                if(marcadas[i].checked){
+                    campo.textContent += marcadas[i].value+" ";
+                }
+            }
+        })
+
+        function añadir(check){
+            if(check.checked){
+                campo.textContent += check.value
+            } else{
+                campo.textContent = ""
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

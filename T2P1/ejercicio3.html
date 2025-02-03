@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <select id="lista1">
+        <option></option>
+        <option value="intel">Intel</option>
+        <option value="amd">AMD</option>
+        <option value="nvidia">Nvidia</option>
+    </select>
+
+    <select id="lista2">
+    </select>
+
+    <br>
+    <input type="button" id="boton" value="Enviar">
+    <script>
+        let lista1 = document.getElementById("lista1");
+        let lista2 = document.getElementById("lista2");
+        let boton = document.getElementById("boton");
+
+
+        lista1.addEventListener("change",function(){
+            switch(lista1.value){
+                case "intel":
+                        let intel = ["HD 3000", "HD 4000", "IRIS 600"];
+                        for(let i=0;i<intel.length;i++){
+                            opcion = document.createElement("option")
+                            opcion.value = intel[i];
+                            opcion.text = intel[i];
+                            lista2.appendChild(opcion)
+                        }
+                    break;
+                case "amd":
+                        let amd = ["RX Series 500", "Vega Series", "RX Series 6000"];
+                        for(let i=0;i<amd.length;i++){
+                            opcion = document.createElement("option")
+                            opcion.value = amd[i];
+                            opcion.text = amd[i];
+                            lista2.appendChild(opcion)
+                        }
+                    break;
+                case "nvidia":
+                        let nvidia = ["GTX Serie 1000", "GTX Sereie 2000", "GTX Sereie 2000"];
+                        for(let i=0;i<nvidia.length;i++){
+                            opcion = document.createElement("option")
+                            opcion.value = nvidia[i];
+                            opcion.text = nvidia[i];
+                            lista2.appendChild(opcion)
+                        }
+                    break;
+            }
+        })
+    </script>
+</body>
+</html>
