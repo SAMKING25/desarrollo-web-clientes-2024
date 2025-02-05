@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        input:invalid {
+            border: 2px dashed red;
+        }
+    </style>
+</head>
+<body>
+    <form novalidate>
+        <label for="nombre">Por favor, introduzca su nombre (entre 5 y 50 caracteres): </span>
+        <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="50">
+        <span class="error"></label>
+        <br />
+        <label for="mail">Por favor, introduzca una dirección de correo electrónico: </label>
+        <input type="email" id="mail" name="mail" required minlength="8">
+        <span class="error"></span>
+        <button type="submit">Enviar</button>
+    </form>
+    <script></script>
+</body>
+</html>

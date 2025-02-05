@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restringir tamaño</title>
+    <script languaje='javascript'>
+    function restringirTamanyo(form) {
+        texto = form.mensaje.value;
+        if (texto.length < 10) alert("Tienes que poner más de 10 dígitos");
+        else if (texto.length > 30) alert("Tienes que poner menos de 30 dígitos");
+        else alert("Todo correcto !!!")
+    }
+</script>
+</head>
+<body>
+    <form name='formulario1' method='POST' action='#' target='_blank'>
+        <textarea rows='4' cols='35' name='mensaje'></textarea><br>
+        <input type='button' value='Comprobar' onclick="restringirTamanyo(this.form)">
+    </form>
+</body>
+</html>
+
+     

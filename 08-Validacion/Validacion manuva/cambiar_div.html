@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cambiar color del div según el select</title>
+    <style>
+      #container {
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <select name="colores" id="colores">
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="yellow">Amarillo</option>
+        <option value="purple">Morado</option>
+      </select>
+      <input type="button" id="cambiar" value="Cambiar" />
+    </form>
+    <br />
+    <div id="container"></div>
+    <script>
+      var colores = document.getElementById("colores");
+      var contenedor = document.getElementById("container");
+      var cambiar = document.getElementById("cambiar");
+
+      cambiar.addEventListener("click", () => {
+        contenedor.style.backgroundColor = colores.value;
+      });
+
+      // SIN BOTÓN
+      // colores.addEventListener("change", () => {
+      //   contenedor.style.backgroundColor = colores.value;
+      // })
+    </script>
+  </body>
+</html>

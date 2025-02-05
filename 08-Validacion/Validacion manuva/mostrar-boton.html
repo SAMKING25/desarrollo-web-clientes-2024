@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostrar/Ocultar Botón</title>
+  </head>
+  <body>
+    <!-- DEPENDE DE QUÉ SE SELECCIONE SE MUESTRA EL BOTÓN -->
+
+    <h2>Formulario de Activación</h2>
+    <label for="activar">¿Mostrar botón?</label>
+    <select id="activar">
+      <option value="no">No</option>
+      <option value="sí">Sí</option>
+    </select>
+
+    <br /><br />
+    <button type="button" id="submitBtn" style="display: none;">
+      Enviar
+    </button>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const select = document.getElementById("activar");
+        const submitBtn = document.getElementById("submitBtn");
+
+
+        select.addEventListener("change", function () {
+          if (select.value === "sí") {
+            submitBtn.style.display = "inline-block";
+          } else {
+            submitBtn.style.display = "none"; 
+          }
+        });
+
+        if (select.value === "sí") {
+          submitBtn.style.display = "inline-block";
+        } else {
+          submitBtn.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>

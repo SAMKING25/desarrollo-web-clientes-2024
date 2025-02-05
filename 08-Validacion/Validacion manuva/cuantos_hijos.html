@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuantos hijos tienes</title>
+  <link rel="stylesheet" href="../../09-validación/Estilos/Minty/bootstrap.min.css">
+</head>
+<body>
+  
+  <div class="container">
+    <form class="col-4" action="" id="formularioHijos">
+      <label for="numHijos" class="form-label">¿Cuántos hijos tiene?</label>
+      <input type="text" name="numHijos" id="numHijos" class="form-control"><br>
+      <div id="hijos"></div>
+    </form>
+  </div>
+  <script>
+    const numHijos = document.getElementById("numHijos");
+
+    numHijos.addEventListener("change", () => {
+      var hijos = document.getElementById("hijos");
+      hijos.replaceChildren();
+      if (numHijos.value > 0) {
+        for(let i = 0; i < numHijos.value; i++) {
+          let labelHijo = document.createElement("label");
+          labelHijo.innerHTML = "Nombre hijo "+(i+1);
+          labelHijo.classList.add("form-label")
+          let nuevoHijo = document.createElement("input");
+          nuevoHijo.setAttribute("type", "text");
+          nuevoHijo.classList.add("form-control")
+          
+          hijos.appendChild(labelHijo);
+          hijos.appendChild(nuevoHijo);
+        }
+      }  
+      
+      // if (numHijos.value == 1) {
+      //   hijo1.removeAttribute("hidden");
+      // } else if (numHijos.value == 2) {
+      //   hijo1.removeAttribute("hidden");
+      //   hijo2.removeAttribute("hidden");
+      // }
+    })
+  </script>
+  <script src="../../09-validación/JS/bootstrap.bundle.min.js"></script>
+</body>
+</html>

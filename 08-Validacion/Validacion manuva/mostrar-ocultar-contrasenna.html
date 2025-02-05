@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostrar/Ocultar Contraseña</title>
+  </head>
+  <body>
+
+    <!-- OCULTA Y MUESTRA LA CONTRASEÑA SEGÚN EL RADIO BUTTON QUE SE PULSE -->
+
+    <h2>Formulario con Mostrar/Ocultar Contraseña</h2>
+    <form>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" name="password" required />
+      
+      <!-- Radio buttons para mostrar/ocultar la contraseña -->
+      <br>
+      <label>
+        <input type="radio" name="mostrar" id="mostrar" value="si"/> 
+      </label>
+      <br>
+      <label>
+        <input type="radio" name="mostrar" id="ocultar" checked  value="no"/>
+      </label>
+    </form>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        let contra = document.getElementById('password');
+        let mostrar = document.getElementById('mostrar');
+        let ocultar = document.getElementById('ocultar');
+
+        // Al seleccionar "Mostrar Contraseña", cambiamos el tipo de input a "text"
+        mostrar.addEventListener('change', function() {
+          if (mostrar.checked) {
+            contra.type = 'text';
+          }
+        });
+
+        // Al seleccionar "Ocultar Contraseña", cambiamos el tipo de input a "password"
+        ocultar.addEventListener('change', function() {
+          if (ocultar.checked) {
+            contra.type = 'password';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
